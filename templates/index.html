@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external stylesheets -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-500">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-500">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-500">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-500">Contact</a>
+                </div>
+                <button class="md:hidden" id="menu-btn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#home" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Home</a>
+            <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#skills" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Skills</a>
+            <a href="#projects" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Projects</a>
+            <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-20 min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-gray-800 mb-4">Welcome to My Portfolio</h1>
+                <p class="text-xl text-gray-600 mb-8">Backend Developer & Web Developer</p>
+                <a href="#contact" class="bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <img src="https://avatars.githubusercontent.com/u/169513870?v=4&size=500" alt="Profile" class="rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <p class="text-gray-600 mb-4">
+                        I am a passionate web developer with experience in creating responsive and user-friendly websites.
+                        My goal is to build applications that not only look great but also provide an excellent user experience.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        With expertise in HTML, CSS, Django, Python, and modern frameworks, I can help bring your ideas to life.
+                    </p>
+                    <button class="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">Download CV</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="font-bold">HTML5</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-bold">CSS3</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-python text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="font-bold">Python</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-database text-4xl text-green-500 mb-4"></i>
+                    <h3 class="font-bold">Django</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-cloud text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold">Django REST Framework</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-js text-4xl text-yellow-400 mb-4"></i>
+                    <h3 class="font-bold">JavaScript</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-sass text-4xl text-pink-500 mb-4"></i>
+                    <h3 class="font-bold">SCSS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {% for project in projects %}
+                <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">{{ project.title }}</h3>
+                        <p class="text-gray-600 mb-4">{{ project.description|truncatechars:100 }}</p>
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-semibold">{{ project.url }}</a>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-center text-gray-500">No projects available at the moment.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Contact Me</h2>
+
+
+        <div class="max-w-lg mx-auto">
+            <form method="POST" class="space-y-6">
+                {% csrf_token %}
+                <div>
+                    <label class="block text-gray-700 mb-2">Name</label>
+                    <input type="text" name="name" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" name="email" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 mb-2">Message</label>
+                    <textarea name="message" class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:border-blue-500" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+                    Send Message
+                </button>
+                <!-- <button type="submit">sent</button> -->
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://x.com/Salohiddin__U" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/salohiddin-orinboyev-801130323/" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Salohiddin08/" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/urinboev_salohiddin/" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/codersdepartament" class="hover:text-blue-500"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p>&copy; 2024 Salohiddin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
